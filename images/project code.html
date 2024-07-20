@@ -1,0 +1,584 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Navigation Bar</title>
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        |*{
+            margin:0;
+            padding: 0;
+            transition: .2s linear;
+            box-sizing: border-box;
+            
+
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            background-color:rgb(150, 150, 150);
+            color:black;
+        }
+        nav ul{
+            width: 25%;
+            margin-right: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            
+
+        }
+        nav ul li{
+            cursor: pointer;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 5px;
+            border-radius: 20px;
+        }
+        nav ul li a:hover{
+            background-color: white;
+            color:black;
+            border-bottom: 3px solid aqua;
+        }
+        nav img {
+            width: 150px;
+            margin-left: 50px;
+        }
+       
+        .sub-container{
+           border: 1px solid black;
+            width: 100%;
+            height: 90vh;
+        }
+        #home{
+           
+           
+           background: url("bga.jpg") no-repeat center center/cover;
+          
+    
+        }
+
+        #home h1{
+           color: black;
+         
+            font-weight: bolder;
+            margin-left: 100px;
+            font-size: 80px;
+
+
+            margin-top: 70px;
+            font-style: italic;
+
+        }
+        
+       
+        #textHome{
+            text-align: center;
+            width: 10%;
+            height: 14%;
+            color:black;
+            font-weight: bolder;
+            margin-left: 200px;
+       
+            font-size: 17px;
+        
+        background-color: rgba(204, 122, 139, 0.548);
+       
+       border-style:double;
+        
+        
+    
+          
+           
+        }
+       
+        .btn{
+            width: 7%;
+            height: 7%;
+            margin-left: 400px;
+            /*margin-top: 10px;*/
+            border-radius: 50px;
+            margin-top: 24px;
+           
+            
+        }
+        .btn:hover{
+            background-color: burlywood;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+        /* about*/
+        .about sub-container{
+            width: 100%;
+            height: 100vh;
+            padding: 30px 0;
+            
+           
+
+        }
+        .main-about{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .main-about .image img{
+            width: 700px;
+            position: relative;
+            top: 60px;
+        }
+        .text-about h1{
+            color: red;
+            
+            font-size: 70px;
+            position: relative;
+            bottom: 30px;
+        }
+        .text-about h1 span{
+           /* color: #00d4ff;*/
+           color: black;
+            margin-right: 30px;
+            font-family: Gabriola;
+            top: 12%;
+        }
+        .text-about h3{
+            color: black;
+            font-size: 30px;
+            left: 63%;
+            
+        }
+        .text-about p{
+            color:black;
+            text-align: center;
+            margin-right: 30px;
+            line-height: 22px;
+            width: 620px;
+        }
+        .btn-about{
+           
+            font-size: large;
+            font-style: italic;
+            font-weight: bolder;
+            
+            position: relative;
+            top: 1%;
+            left: 63%;
+            bottom: 27px;
+            width: 100px;
+            cursor: pointer;
+            
+            padding: 12px 25px;
+            transition: 0.2s ease-in-out;
+            text-align: center;
+        }
+        .btn-about a{
+            text-decoration: none;
+            color:black;
+            display: block;
+            padding: 5px;
+            
+            border-style:solid;
+            background-color: #00d4ff;
+        }
+        .btn-about a:hover{
+            background-color: black;
+            color:white;
+            border-bottom: 3px solid red;
+           
+        }
+        .main-contact{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .main-contact .image img{
+            width: 700px;
+            position: relative;
+            top: 60px;
+        }
+        .text-contact h1{
+            color:red;
+            
+            font-size: 70px;
+            position: relative;
+            bottom: 30px;
+        }
+        .text-contact h1 span{
+           /* color: #00d4ff;*/
+           color: black;
+            margin-right: 30px;
+            font-family: Gabriola;
+            top: 12%;
+        }
+        .text-contact h3{
+            color: black;
+            font-size: 30px;
+            left: 63%;
+            
+        }
+
+        /* Menu style*/
+
+        .menu sub-container{
+            margin: 10px auto;
+            padding: 0 10%;
+            padding-bottom: 10px;
+            text-transform: capitalize;
+        
+          
+
+        }
+        .menu h1{
+            color: white;
+            font-size: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            text-shadow: 0 15px 10px rgba(0,0,0,0.2);
+
+        }
+        .menu h1 span{
+            
+            color: #00d4ff;
+            margin-left: 15px;
+            font-family: gabriola;
+        }
+        .menu .container{
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(270px,1fr));
+
+        }
+        .menu-box{
+            padding: 20px;
+            text-align: center;
+         
+            border-radius: 5px;
+            background: #fff;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+          
+        }
+        .menu-box img{
+            width: 300px;
+            height: 200px;
+           
+        }
+       .menu-box h2 ,h3{
+        color: #444;
+        padding: 10px 0;
+        font-size: 20px;
+
+
+       }
+       .menu-box p{
+        color: #777;
+        font-size: 14px;
+        line-height: 1.6;
+       }
+       .menu-box btn{
+        color: #fff;
+        border: none;
+        outline: none;
+        font-size: 17px;
+        margin-top: 10px;
+        padding: 8px 15px;
+        background:#333;
+        border-radius: 5px;
+        display: inline-block;
+        text-decoration: none;
+       }
+       .menu-box .btn:hover{
+        letter-spacing: 1px;
+       }
+       .menu-box:hover{
+        transform: scale(1.03);
+        box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+       }
+       @media (max-width:770px) {
+        .menu sub-container{
+            padding: 20px;
+        }
+       }
+
+       /*special*/
+       .special sub-container{
+            margin: 10px auto;
+            padding: 0 10%;
+            padding-bottom: 10px;
+            text-transform: capitalize;
+        
+          
+
+        }
+        .special h1{
+            color: #00d4ff;
+            font-size: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            text-shadow: 0 15px 10px rgba(0,0,0,0.2);
+            font-family: gabriola;
+
+        }
+        .special h1 span{
+            color: white;
+           
+            margin-left: 15px;
+            
+        }
+        .special .container{
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(270px,1fr));
+
+        }
+        .special-box{
+            padding: 20px;
+            text-align: center;
+            border: 5px solid rebeccapurple;
+            border-radius: 5px;
+            background: #fff;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+          
+        }
+        .special-box img{
+            height: 70px;
+           
+        }
+        .special-box h2 ,h3{
+        color: #444;
+        padding: 10px 0;
+        font-size: 20px;
+
+
+       }
+       .special-box p{
+        color: #777;
+        font-size: 14px;
+        line-height: 1.6;
+       }
+       .special-box btn{
+        color: #fff;
+        border: none;
+        outline: none;
+        font-size: 17px;
+        margin-top: 10px;
+        padding: 8px 15px;
+        background:#333;
+        border-radius: 5px;
+        display: inline-block;
+        text-decoration: none;
+       }
+       .special .btn:hover{
+        letter-spacing: 1px;
+       }
+       .special-box:hover{
+        transform: scale(1.03);
+        box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+       }
+       @media (max-width:770px) {
+        .special sub-container{
+            padding: 20px;
+        }
+       }
+       
+      
+    </style>
+
+
+     
+</head>
+<body >
+    <nav>
+        <img src="logo.png" alt="shreyanjali"><p style="color:white; font-family: Arial,helvetica, sans-serif;font-size:xxx-large; font-weight: bold;"><i>Shreyanjli Plant Center</i></p>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">plant</a></li>
+            <li><a href="#special">flower</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="home sub-container" id="home">
+            <h1 class="h-primary"><i>Be the Garden</i></h1>
+            
+            <div id="textHome">
+                <p ><b><i>Meet a Garden point<br>
+
+                </i></b></p>
+                <p>All your favourite is here!</p>
+                <img src= "gall1.jfif" alt="gall" >
+                
+
+            </div><br>
+            
+            
+            
+        </div>
+
+        <div class="menu sub-container" id="menu" style="background-color: rgb(124, 112, 112);">
+            <h1>menu <span>over</span> </h1>
+            <div class="container">
+                <div class="menu-box">
+                    zz
+                        <img src="image3.jfif" alt="image3" >
+                  
+                        <h2>Aloevera</h2>
+                        <p >Aloe vera is a succulent plant species of the genus Aloe. It is widely distributed, and is considered an invasive species in many world regions
+                             </p>
+                        <h3>200 Rs</h3>
+                        <a href="#" class="btn">Order Now</a>
+                        
+                </div>
+                <div class="menu-box">
+                    
+                    <img src="tu.jpg" alt="tu">
+              
+                    <h2>tulsi</h2>
+                    <p >Ocimum tenuiflorum, commonly known as holy basil, tulsi or tulasi, and tamole, damole, or domole in Fiji, is an aromatic perennial plant in the family Lamiaceae. 
+                         </p>
+                    <h3>150 Rs</h3>
+                    <a href="#" class="btn">Order Now</a>
+                    
+                </div>
+                <div class="menu-box">
+                    
+                         <img src="ca.jpg" alt="ca">
+          
+                         <h2>Cactus</h2>
+                          <p >A cactus is a member of the plant family Cactaceae, a family comprising about 127 genera with some 1750 known species of the order Caryophyllales. 
+                               </p>
+                        <h3>300 Rs</h3>
+                        <a href="#" class="btn">Order Now</a>
+                
+                </div>
+                <div class="menu-box">
+                    
+                          <img src="na.jfif" alt="na">
+      
+                           <h2>Neem</h2>
+                           <p >Azadirachta indica, commonly known as margosa, neem, nimtree or Indian lilac, is a tree in the mahogany family Meliaceae. 
+                             </p>
+                           <h3>250 Rs</h3>
+                            <a href="#" class="btn">Order Now</a>
+            
+                </div>
+               
+                
+                
+            </div>
+             
+        </div>
+        <div class="special sub-container" id="special" style="background-color: rgb(59, 42, 42);" >
+            <h1>Special <span>Menu</span> </h1>
+            <div class="container">
+                <div class="special-box">
+                    
+                    <img src="lo2.jfif" alt="lo2">
+              
+                    <h2>loutos</h2>
+                    <p >Nelumbo nucifera, also known as sacred lotus, Laxmi lotus, Indian lotus, or simply lotus, is one of two extant species of aquatic plant in the family Nelumbonaceae 
+                         </p>
+                    <h3>500 Rs</h3>
+                    <a href="#" class="btn-special">Order Now</a>
+                    
+                </div>
+                <div class="special-box">
+                    
+                    <img src="pic8.jfif" alt="pic8">
+              
+                    <h2>sunflower</h2>
+                    <p >Helianthus is a genus comprising about 70 species of annual and perennial flowering plants in the daisy family Asteraceae commonly known as sunflowers. 
+                         </p>
+                    <h3>400 Rs</h3>
+                    <a href="#" class="btn-special">Order Now</a>
+                    
+                </div>
+                <div class="special-box">
+                    
+                    <img src="image5.jfif">
+              
+                    <h2>Hibiscus</h2>
+                    <p >Hibiscus is a genus of flowering plants in the mallow family, Malvaceae. The genus is quite large, comprising several hundred species that are native to warm temperate, subtropical and tropical regions throughout the world. 
+                         </p>
+                    <h3>350 Rs</h3>
+                    <a href="#" class="btn-special">Order Now</a>
+                    
+                </div>
+                
+                
+                
+                
+                
+            </div>
+
+            
+        </div>
+
+             
+        
+
+        <div class="about sub-container" id="about" style="background-color: lightgrey;" >
+            <div class="main-about">
+                <div class="image">
+                    <img src=" gif.webp" alt="gif">
+                </div>
+                <div class="text-about">
+                    <h1><span>About</span>Us</h1>
+                    <h3>Why Choose us</h3>
+                    <p>A beautiful plant is like having a friend around the house.A man doesn't plant a tree for himself.
+                    </p>
+                </div>
+            </div>
+            <div class="btn-about">
+                <a href="#">Order Now</a>
+            </div>
+        </div>
+        <div class="contact sub-container" id="contact" style="background-color: burlywood;" >
+            <div class="main-contact">
+                <div class="image">
+                    <img src="us.jfif" alt="us">
+                </div>
+                <div class="text-contact">
+                    <h1><span>contact</span>Us</h1>
+                    <label>Name</label>
+                    <input type="text" name="name" size="20"/><br>
+                    <br>
+                    <br>
+                    <br>
+                    <label>E-mail</label>
+                    <input type="text" name="E-mail" size="20"/><br>
+                    <br>
+                    <br>
+                    <br>
+                    <label>Phone No</label>
+                    <input type="text" name="phone No" size="20"/><br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div class="btn-about">
+                <a href="#">shop now</a>
+            </div>
+        </div>
+
+        
+    </div>
+    <div class="special">
+        
+    </div>
+   
+</body>
+</html>
